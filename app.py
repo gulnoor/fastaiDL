@@ -1,5 +1,5 @@
-from fastai.vision.widgets import *
-from fastai.vision.all import *
+from fastai.vision.core import PILImage
+from fastai.learner import load_learner
 import streamlit as st
 
 model = load_learner("./model.pkl")
