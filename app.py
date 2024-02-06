@@ -1,10 +1,12 @@
+
+import pathlib
 import platform
 from fastai.vision.core import PILImage
 from fastai.learner import load_learner
 import streamlit as st
-import pathlib
+
 plt = platform.system()
-if plt == 'Windows': pathlib.WindowsPath = pathlib.PosixPath 
+if plt == 'Posix': pathlib.WindowsPath = pathlib.PosixPath 
 
 model = load_learner("./model.pkl")
 file = st.file_uploader("Upload photo")
