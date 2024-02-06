@@ -1,4 +1,5 @@
 fastbook
+.streamlit
 .vscode
 fastaiDL.code-workspace
 env

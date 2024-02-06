@@ -1,12 +1,15 @@
+# from streamlit_pandas_profiling import st_profile_report
+from fastai.vision.core import PILImage
+import fastcore.all as fc
+from fastai.learner import load_learner
 import streamlit as st
-import pandas as pd
-st.header('asdas')
-st.write('gg')
-b = st.button('click me')
-if b:
-    st.write('thanks')
-else:
-    st.write('ok')
-st.write('Hello, *World!* :sunglasses:')
-data = pd.DataFrame({'name':['aa','gg'],'value':[1,2]})
-st.write(data)
+
+model = load_learner("./model.pkl")
+file = st.file_uploader("Upload photo")
+if file:
+    st.image(file)
+    img  = PILImage.create((file))
+    st.write(model.predict(img))
+    file=None
+st.checkbox('asdasd')
+print("dd")
