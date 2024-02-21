@@ -11,9 +11,8 @@ if not plt == 'Windows': pathlib.WindowsPath = pathlib.PosixPath
 model = load_learner("./model.pkl")
 file = st.file_uploader("Upload photo")
 if file:
-    st.image(file)
     img  = PILImage.create((file))
     st.write(model.predict(img))
+    st.image(img.to_thumb())
 
 st.checkbox('asdasd')
-print("dd")

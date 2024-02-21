@@ -3,3 +3,10 @@ fastbook
 .vscode
 fastaiDL.code-workspace
 env
+mnist_sample
+MNIST
+NLP
+newsgroups
+Datasets
+course22-master
+course22p2-master
